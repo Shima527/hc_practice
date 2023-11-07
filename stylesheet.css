@@ -54,6 +54,7 @@ header {
 
 .profile-wrapper {
   text-align: center;
+  margin-bottom: 70px;
 }
 .profile-button {
   text-decoration: none;
@@ -89,6 +90,7 @@ header {
 
 .picture-wrapper {
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .picture-wrapper .container {
