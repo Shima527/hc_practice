@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 960px;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mainimg {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+header {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.header-list {
+  display: inline-block;
+}
+
+.menu-list a {
+  margin-left: 15px;
+}
+
+.resume {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(47, 47, 85);
+  padding: 10px 10px;
+  text-decoration: none;
+  margin-right: 20vw;
+}
+
+.menu-list {
+  padding-left: 100px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: black;
+}
+
+/*---------Profile content ------------*/
+
+.profile-wrapper {
+  text-align: center;
+}
+.profile-button {
+  text-decoration: none;
+  color: black;
+}
+
+.profile-wrapper h2 {
+  display: inline-block;
+  border-bottom: 1px solid black;
+}
+
+.profile-wrapper img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.name-list {
+  text-align: center;
+  display: inline-block;
+}
+
+.name-list h4 {
+  margin-right: 488px;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+/*------------ picture content ----------------*/
+
+.picture-wrapper {
+  text-align: center;
+}
+
+.picture-wrapper .container {
+  text-align: center;
+}
+
+.picture-part {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.picture-wrapper h2 {
+  display: inline-block;
+  border-bottom: 1px solid black;
+}
+
+.picture-part .text {
+  font-size: 13px;
+}
+
+.picture-part img {
+  width: 230px;
+  height: 150px;
+}
+
+/* ---------- footer ---------------  */
+
+.footer {
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
