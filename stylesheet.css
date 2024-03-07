@@ -1,0 +1,156 @@
+.container {
+  width: 960px;
+  padding: 0 4%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header h3 {
+  background-color: #3a4051;
+  color: #fff;
+  padding: 7px;
+  width: 70px;
+  margin-left: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.mainvisual {
+  height: 600px;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 140px;
+  margin-right: 570px;
+}
+
+.profile h1 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  font-weight: 5w;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.profile .profile-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile .profile-text {
+  font-size: 12px;
+  text-align: left;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 100px;
+}
+
+.profile-image {
+  margin-left: 140px;
+  margin-right: 570px;
+  text-align: center;
+}
+
+.profile-image h1 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.profile-images .image {
+  margin-bottom: 20px;
+}
+
+.profile-images .image .title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-images .image img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-left: 140px;
+  margin-right: 570px;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+/* 600px 以上の設定 */
+@media screen and (min-width: 600px) {
+  .profile {
+    margin-bottom: 30px;
+    width: 430px;
+    margin: 0 auto;
+  }
+
+  .profile-content {
+    padding-right: 30px;
+  }
+
+  .profile .profile-flex {
+    display: flex;
+    text-align: left;
+  }
+  .profile .profile-name {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .profile .profile-text {
+    line-height: 1.4;
+  }
+  .profile img {
+    width: 70px;
+  }
+  .profile-image {
+    margin-top: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  .profile-images {
+    width: 430px;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .profile-images .image .title {
+    font-size: 12px;
+  }
+
+  .profile-images .image .text {
+    font-size: 9px;
+  }
+
+  .footer {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+}
