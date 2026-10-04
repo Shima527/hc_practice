@@ -1,7 +1,7 @@
 #groupメンバー
 group = ["A","B","C","D","E","F"]
 
-### 2-4で分ける場合のメソッド
+### グループ分けメソッド
 def make_group(group,num)
   group2 = []
   group_num = 6
