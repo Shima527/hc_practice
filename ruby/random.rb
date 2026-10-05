@@ -1,19 +1,15 @@
 #groupメンバー
 group = ["A","B","C","D","E","F"]
 
-### グループ分けメソッド
+#グループ分けメソッド
 def make_group(group,num)
   group2 = []
-  group_num = 6
-
   while group2.size < num
-  #乱数を作成
-  random = rand(group_num)
-  #groupからgroup2へメンバーを抽出する
-  group2 << group.slice!(random)
-  group_num -= 1
+  #groupからgroup2へ要素を渡す
+  group2 << group.sample
+  #groupからgroup2の要素を削除する
+  group -= group2
   end
-
   p group2.sort
   p group.sort
 end
