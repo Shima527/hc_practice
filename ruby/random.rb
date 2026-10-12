@@ -13,8 +13,3 @@ def make_group(group)
 end
 
 make_group(group)
-
-
-
-
-
