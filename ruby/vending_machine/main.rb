@@ -1,6 +1,6 @@
-require_relative './Suica'
-require_relative './Drink'
-require_relative './VendingMachine'
+require_relative './suica'
+require_relative './drink'
+require_relative './vendingMachine'
 
 def back_to_first?
   print "機能一覧に戻りますか？[Y/n]"
@@ -38,7 +38,7 @@ if ch == '1'
   loop {
     print "---Suica チャージ残高確認------------\n"
     print "\n"
-    print "#{suica.charge}円\n"
+    print "#{suica.balance}円\n"
     print "\n"
     print "----------------------------\n"
     if back_to_first?
@@ -53,7 +53,7 @@ elsif ch == '2'
   print "チャージする金額を入力してください: "
   amount = gets.chomp
   begin
-  suica.do_charge(amount.to_i)
+  suica.charge(amount.to_i)
   rescue => e
     puts e.message
     if back_to_first?
@@ -84,7 +84,7 @@ elsif ch == '3'
 elsif ch == '4'
   loop {
   print "---自販機 購入可能リスト------------\n"
-  vm.drink_list
+    vm.drink_list
   print "------------------------------\n"
   if back_to_first?
       break
@@ -106,26 +106,27 @@ elsif ch == '5'
 elsif ch == '6'
     loop {
   print "---自販機 在庫補充------------\n"
-    num = 1
-    VendingMachine::DRINKS.each{|d|
-      print "No.#{num} 名前:#{d[:name]} 値段: #{d[:price]}\n"
-      num += 1
-  }
   print "------------------------------\n"
-  print "補充するドリンク番号を入力してください:"
-  d_num = gets.chomp
-  print "補充する本数を入力してください"
-  d_count = gets.chomp
+  print "補充するドリンク名してください:"
+  drink_name = gets.chomp
+  print "値段を入力してください:"
+  price = gets.chomp
+  print "補充する本数を入力してください:"
+  drink_count = gets.chomp
   
-  begin
-    vm.add_drink(d_num.to_i,d_count.to_i)
-  rescue => e
-      puts e.message
-    if back_to_first?
-      break
-    else
-      redo
-    end
+  if drink_count.to_i < 1
+    print "1本以上を入力してください"
+
+  if back_to_first?
+    break
+  else
+    redo
+  end
+  end
+
+  drink_count.to_i.times do
+  drink = Drink.new(drink_name,price.to_i)
+  vm.add_drink(drink)
   end
   print "在庫補充が完了しました\n"
   print "------------------------------\n"
@@ -139,17 +140,17 @@ elsif ch == '6'
 elsif ch == '7'
   loop{
     print "---ドリンク購入------------\n"
-    num = 1
-    VendingMachine::DRINKS.each{|d|
-      print "No.#{num} 名前:#{d[:name]} 値段: #{d[:price]}\n"
-      num += 1
-  }
+  #   num = 1
+  #   VendingMachine::DRINKS.each{|d|
+  #     print "No.#{num} 名前:#{d[:name]} 値段: #{d[:price]}\n"
+  #     num += 1
+  # }
     print "------------------------------\n"
-    print "購入するドリンクの番号を入力してください:"
-    d_num = gets.chomp
+    print "購入するドリンクの名前を入力してください:"
+    drink_name = gets.chomp
 
     begin 
-    vm.purchase(d_num.to_i,suica)
+    vm.purchase(drink_name,suica)
     rescue => e
       puts e.message
 
