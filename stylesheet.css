@@ -1,0 +1,169 @@
+.container {
+  width: 100vw;
+  padding: 0 4%;
+}
+
+.header {
+}
+
+.header .header-content {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header h3 {
+  background-color: #3a4051;
+  color: #fff;
+  padding: 7px;
+  width: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.header ul li {
+  font-size: 13px;
+}
+
+.mainvisual {
+  height: 600px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.profile {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.profile h1 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  font-weight: 10w;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.profile .profile-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile .profile-text {
+  font-size: 12px;
+  text-align: left;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 100px;
+}
+
+.profile-image {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-image h1 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.profile-images .image {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.profile-images .image .title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-images .image img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  text-align: center;
+  font-size: 10px;
+
+  color: grey;
+}
+
+/* 600px 以上の設定 */
+@media screen and (min-width: 600px) {
+  .container {
+    width: 960px;
+    padding: 0 4%;
+  }
+  .header .header-content {
+    width: 430px;
+    margin: 0 auto;
+  }
+  .profile {
+    margin-bottom: 30px;
+    width: 430px;
+  }
+
+  .profile-content {
+  }
+
+  .profile .profile-flex {
+    display: flex;
+    text-align: left;
+    gap: 10px;
+  }
+  .profile .profile-name {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .profile .profile-text {
+    line-height: 1.4;
+  }
+  .profile img {
+    width: 70px;
+  }
+  .profile-image {
+    width: 430px;
+    margin: 70px auto 50px auto;
+  }
+
+  .profile-images {
+    width: 430px;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .profile-images .image .title {
+    font-size: 12px;
+  }
+
+  .profile-images .image .text {
+    font-size: 9px;
+  }
+
+  .footer {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+}
